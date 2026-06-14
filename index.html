@@ -76,6 +76,68 @@ body{
         transform:rotateY(360deg) rotateX(10deg);
     }
 }
+    /* Mobile Responsive */
+@media screen and (max-width: 768px) {
+
+    .scene{
+        height: 55vh;
+    }
+
+    .heart{
+        transform: scale(0.7);
+        transform-style: preserve-3d;
+        animation: spin 25s linear infinite;
+    }
+
+    .word{
+        font-size: 9px;
+    }
+
+    .message{
+        padding: 15px;
+        margin-top: -20px;
+    }
+
+    .message h1{
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
+
+    .message p{
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .scene{
+        height: 50vh;
+    }
+
+    .heart{
+        transform: scale(0.55);
+        transform-style: preserve-3d;
+        animation: spin 25s linear infinite;
+    }
+
+    .word{
+        font-size: 7px;
+    }
+
+    .message{
+        padding: 10px 15px;
+    }
+
+    .message h1{
+        font-size: 1rem;
+    }
+
+    .message p{
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+}
 </style>
 </head>
 <body>
