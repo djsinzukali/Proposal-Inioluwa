@@ -124,6 +124,17 @@ body{
         transform-style: preserve-3d;
         animation: spin 25s linear infinite;
     }
+    
+    #playBtn{
+    background:#ff69b4;
+    color:white;
+    border:none;
+    padding:12px 24px;
+    border-radius:30px;
+    cursor:pointer;
+    margin-top:20px;
+    font-size:16px;
+}
 
     .word{
         font-size: 7px;
@@ -149,6 +160,12 @@ body{
 <div class="scene">
     <div class="heart" id="heart"></div>
 </div>
+
+<button id="playBtn">🎵 Play Our Song</button>
+
+<audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
 
 <div class="message">
     <h1>❤️ Adakanu-Segun Hannah Inioluwa ❤️</h1>
@@ -201,6 +218,10 @@ document.addEventListener("click", () => {
     const music = document.getElementById("bgMusic");
     music.play();
 }, { once: true });
+
+document.getElementById("playBtn").addEventListener("click", () => {
+    document.getElementById("bgMusic").play();
+});
 </script>
 
 </body>
