@@ -14,11 +14,11 @@
 
 body{
     background:#000;
-    overflow:hidden;
-    height:100vh;
+    overflow-x:hidden;
+    overflow-y:auto;
+    min-height:100vh;
     display:flex;
     flex-direction:column;
-    justify-content:center;
     align-items:center;
     font-family:'Arial',sans-serif;
 }
@@ -38,6 +38,12 @@ body{
     animation:spin 25s linear infinite;
 }
 
+#playBtn{
+    position:relative;
+    z-index:20;
+    margin-top:20px;
+    margin-bottom:30px;
+}
 .word{
     position:absolute;
     color:#ff69b4;
@@ -117,13 +123,13 @@ body{
 
     .scene{
         height: 46vh;
+        margin-top: 20px;
     }
 
     .heart{
-        transform: scale(0.55);
-        transform-style: preserve-3d;
-        animation: spin 25s linear infinite;
-    }
+        transform:scale(0.45);
+        transform-style:preserve-3d;
+        animation:spin 25s linear infinite;
     
     #playBtn{
     background:#ff69b4;
@@ -132,7 +138,8 @@ body{
     padding:12px 24px;
     border-radius:25px;
     cursor:pointer;
-    margin-top:20px;
+    margin-top:40px;
+    margin-bottom:40px;
     font-size:16px;
 }
 
@@ -142,6 +149,7 @@ body{
 
     .message{
         padding: 10px 15px;
+        margin-top:10px;
     }
 
     .message h1{
